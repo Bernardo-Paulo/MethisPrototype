@@ -114,41 +114,37 @@ elif st.session_state.screen == 2:
     """, unsafe_allow_html=True)
     
     with st.form("soap_form"):
-        col1, col2 = st.columns(2)
+        st.markdown('<p class="soap-label">S - Subjetivo</p>', unsafe_allow_html=True)
+        subjetivo = st.text_area(
+            "",
+            placeholder="Sintomas, queixas do paciente, história clínica...",
+            height=150,
+            key="s"
+        )
         
-        with col1:
-            st.markdown('<p class="soap-label">S - Subjetivo</p>', unsafe_allow_html=True)
-            subjetivo = st.text_area(
-                "",
-                placeholder="Sintomas, queixas do paciente, história clínica...",
-                height=150,
-                key="s"
-            )
-            
-            st.markdown('<p class="soap-label">A - Avaliação</p>', unsafe_allow_html=True)
-            avaliacao = st.text_area(
-                "",
-                placeholder="Diagnóstico, impressão clínica, análise...",
-                height=150,
-                key="a"
-            )
+        st.markdown('<p class="soap-label">O - Objetivo</p>', unsafe_allow_html=True)
+        objetivo = st.text_area(
+            "",
+            placeholder="Sinais vitais, exame físico, observações...",
+            height=150,
+            key="o"
+        )
         
-        with col2:
-            st.markdown('<p class="soap-label">O - Objetivo</p>', unsafe_allow_html=True)
-            objetivo = st.text_area(
-                "",
-                placeholder="Sinais vitais, exame físico, observações...",
-                height=150,
-                key="o"
-            )
-            
-            st.markdown('<p class="soap-label">P - Plano</p>', unsafe_allow_html=True)
-            plano = st.text_area(
-                "",
-                placeholder="Tratamento, medicação, seguimento, próximos passos...",
-                height=150,
-                key="p"
-            )
+        st.markdown('<p class="soap-label">A - Avaliação</p>', unsafe_allow_html=True)
+        avaliacao = st.text_area(
+            "",
+            placeholder="Diagnóstico, impressão clínica, análise...",
+            height=150,
+            key="a"
+        )
+        
+        st.markdown('<p class="soap-label">P - Plano</p>', unsafe_allow_html=True)
+        plano = st.text_area(
+            "",
+            placeholder="Tratamento, medicação, seguimento, próximos passos...",
+            height=150,
+            key="p"
+        )
         
         st.markdown("---")
         
