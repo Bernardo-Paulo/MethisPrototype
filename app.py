@@ -80,7 +80,7 @@ if st.session_state.screen == 1:
         st.markdown("""
         <div class="consulta-card">
             <h3>🩺 Dr. João Silva - Cardiologia</h3>
-            <p><strong>Paciente:</strong> Maria Santos</p>
+            <p><strong>Paciente:</strong> Maria José Santos</p>
             <p><strong>Tipo:</strong> Consulta de rotina</p>
             <p><strong>Hora:</strong> ⏰ 09:30</p>
         </div>
@@ -109,7 +109,7 @@ elif st.session_state.screen == 2:
     # Info da consulta atual
     st.markdown("""
     <div style='background: #e3f2fd; padding: 15px; border-radius: 10px; margin-bottom: 20px;'>
-        <strong>👤 Paciente:</strong> Maria Santos | <strong>👨‍⚕️ Médico:</strong> Dr. João Silva | <strong>⏰ Hora:</strong> 09:30
+        <strong>👤 Paciente:</strong> Maria José Santos | <strong>👨‍⚕️ Médico:</strong> Dr. João Silva | <strong>⏰ Hora:</strong> 09:30
     </div>
     """, unsafe_allow_html=True)
     
