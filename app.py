@@ -109,7 +109,9 @@ elif st.session_state.screen == 2:
     # Info da consulta atual
     st.markdown("""
     <div style='background: #e3f2fd; padding: 15px; border-radius: 10px; margin-bottom: 20px;'>
-        <strong>👤 Paciente:</strong> Maria José Santos | <strong>👨‍⚕️ Médico:</strong> Dr. João Silva | <strong>⏰ Hora:</strong> 09:30
+        <strong>👤 Paciente:</strong> Maria José Santos<br>
+        <strong>👨‍⚕️ Médico:</strong> Dr. João Silva<br>
+        <strong>⏰ Hora:</strong> 09:30
     </div>
     """, unsafe_allow_html=True)
     
