@@ -173,7 +173,7 @@ elif st.session_state.screen == 2:
     st.title("📝 Registo da Consulta")
     
     # Info da consulta atual - só paciente
-    st.markdown('<div class="compact-info"><strong>👤 Paciente:</strong> Maria José Santos</div>', unsafe_allow_html=True)
+    st.markdown('<div class="compact-info">Maria José Santos</div>', unsafe_allow_html=True)
     
     with st.form("soap_form"):
         st.markdown('<p class="soap-label">S - Subjetivo</p>', unsafe_allow_html=True)
