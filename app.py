@@ -86,15 +86,28 @@ st.markdown("""
     
     /* Reduzir espaçamento do título principal */
     .main .block-container {
-        padding-top: 1rem !important;
-        padding-bottom: 1rem !important;
+        padding-top: 0rem !important;
+        padding-bottom: 0rem !important;
+        margin-top: 0px !important;
     }
     
     /* Reduzir espaçamento do título h1 */
     h1 {
         margin-top: 0px !important;
-        margin-bottom: 10px !important;
+        margin-bottom: 5px !important;
         padding-top: 0px !important;
+        padding-bottom: 0px !important;
+    }
+    
+    /* Remover espaçamento superior da página */
+    .stApp > header {
+        height: 0px !important;
+    }
+    
+    /* Reduzir espaçamento do container principal */
+    .main {
+        padding-top: 0px !important;
+        margin-top: 0px !important;
     }
 </style>
 """, unsafe_allow_html=True)
