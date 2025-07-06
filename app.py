@@ -83,6 +83,19 @@ st.markdown("""
         margin-bottom: 0px !important;
         padding-bottom: 0px !important;
     }
+    
+    /* Reduzir espaçamento do título principal */
+    .main .block-container {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+    }
+    
+    /* Reduzir espaçamento do título h1 */
+    h1 {
+        margin-top: 0px !important;
+        margin-bottom: 10px !important;
+        padding-top: 0px !important;
+    }
 </style>
 """, unsafe_allow_html=True)
 
