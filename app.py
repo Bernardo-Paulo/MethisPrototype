@@ -259,10 +259,10 @@ with st.sidebar:
     st.markdown("### ℹ️ Informações")
     st.markdown("""
     **SOAP** é um método de documentação médica:
-    - **S** - Subjetivo (sintomas do paciente)
-    - **O** - Objetivo (exame físico)  
-    - **A** - Avaliação (diagnóstico)
-    - **P** - Plano (tratamento)
+    - **S** - Subjetivo
+    - **O** - Objetivo 
+    - **A** - Avaliação
+    - **P** - Plano
     """)
     
     if st.session_state.consulta_data:
