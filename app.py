@@ -129,7 +129,7 @@ elif st.session_state.screen == 2:
         subjetivo = st.text_area(
             "",
             placeholder="Sintomas, queixas do paciente, história clínica...",
-            height=60,
+            height=68,
             key="s"
         )
         
@@ -137,7 +137,7 @@ elif st.session_state.screen == 2:
         objetivo = st.text_area(
             "",
             placeholder="Sinais vitais, exame físico, observações...",
-            height=60,
+            height=68,
             key="o"
         )
         
@@ -145,7 +145,7 @@ elif st.session_state.screen == 2:
         avaliacao = st.text_area(
             "",
             placeholder="Diagnóstico, impressão clínica, análise...",
-            height=60,
+            height=68,
             key="a"
         )
         
@@ -153,7 +153,7 @@ elif st.session_state.screen == 2:
         plano = st.text_area(
             "",
             placeholder="Tratamento, medicação, seguimento, próximos passos...",
-            height=60,
+            height=68,
             key="p"
         )
         
