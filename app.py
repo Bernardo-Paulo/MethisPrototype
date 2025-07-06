@@ -36,10 +36,27 @@ st.markdown("""
     }
     
     .soap-label {
-        font-size: 24px;
+        font-size: 18px;
         font-weight: bold;
         color: #4facfe;
         margin-bottom: 5px;
+    }
+    
+    .compact-info {
+        background: #e3f2fd; 
+        padding: 8px 15px; 
+        border-radius: 8px; 
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+    
+    .header-compact {
+        text-align: center; 
+        padding: 15px; 
+        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); 
+        border-radius: 10px; 
+        color: white; 
+        margin-bottom: 20px;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -64,8 +81,7 @@ if st.session_state.screen == 1:
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
         st.markdown(f"""
-        <div style='text-align: center; padding: 20px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); 
-                    border-radius: 15px; color: white; margin-bottom: 30px;'>
+        <div class="header-compact">
             <h2>Consultas de Hoje</h2>
             <p>{datetime.date.today().strftime('%A, %d de %B de %Y')}</p>
         </div>
@@ -106,25 +122,21 @@ elif st.session_state.screen == 2:
     st.title("📝 Registo da Consulta")
     st.markdown("---")
     
-    # Info da consulta atual
-    st.markdown("""
-    <div style='background: #e3f2fd; padding: 15px; border-radius: 10px; margin-bottom: 20px;'>
-        Maria José Santos
-    </div>
-    <div style='background: #e3f2fd; padding: 15px; border-radius: 10px; margin-bottom: 20px;'>
-        <strong>👨‍⚕️ Médico:</strong> Dr. João Silva
-    </div>
-    <div style='background: #e3f2fd; padding: 15px; border-radius: 10px; margin-bottom: 20px;'>
-        <strong>⏰ Hora:</strong> 09:30
-    </div>
-    """, unsafe_allow_html=True)
+    # Info da consulta atual - mais compacta
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        st.markdown('<div class="compact-info"><strong>👤 Paciente:</strong> Maria José Santos</div>', unsafe_allow_html=True)
+    with col2:
+        st.markdown('<div class="compact-info"><strong>👨‍⚕️ Médico:</strong> Dr. João Silva</div>', unsafe_allow_html=True)
+    with col3:
+        st.markdown('<div class="compact-info"><strong>⏰ Hora:</strong> 09:30</div>', unsafe_allow_html=True)
     
     with st.form("soap_form"):
         st.markdown('<p class="soap-label">S - Subjetivo</p>', unsafe_allow_html=True)
         subjetivo = st.text_area(
             "",
             placeholder="Sintomas, queixas do paciente, história clínica...",
-            height=150,
+            height=80,
             key="s"
         )
         
@@ -132,7 +144,7 @@ elif st.session_state.screen == 2:
         objetivo = st.text_area(
             "",
             placeholder="Sinais vitais, exame físico, observações...",
-            height=150,
+            height=80,
             key="o"
         )
         
@@ -140,7 +152,7 @@ elif st.session_state.screen == 2:
         avaliacao = st.text_area(
             "",
             placeholder="Diagnóstico, impressão clínica, análise...",
-            height=150,
+            height=80,
             key="a"
         )
         
@@ -148,7 +160,7 @@ elif st.session_state.screen == 2:
         plano = st.text_area(
             "",
             placeholder="Tratamento, medicação, seguimento, próximos passos...",
-            height=150,
+            height=80,
             key="p"
         )
         
