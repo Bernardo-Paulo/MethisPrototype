@@ -39,7 +39,8 @@ st.markdown("""
         font-size: 18px;
         font-weight: bold;
         color: #4facfe;
-        margin-bottom: 5px;
+        margin-bottom: 2px;
+        margin-top: 5px;
     }
     
     .compact-info {
@@ -57,6 +58,21 @@ st.markdown("""
         border-radius: 10px; 
         color: white; 
         margin-bottom: 20px;
+    }
+    
+    /* Reduzir espaçamento entre campos do formulário */
+    .stTextArea > div > div > div > div {
+        margin-bottom: 0px !important;
+    }
+    
+    .stTextArea {
+        margin-bottom: 8px !important;
+    }
+    
+    /* Reduzir padding interno das caixas de texto */
+    .stTextArea textarea {
+        padding: 8px !important;
+        line-height: 1.2 !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -122,11 +138,12 @@ elif st.session_state.screen == 2:
     st.title("📝 Registo da Consulta")
     
     # Info da consulta atual - só paciente
-    st.markdown('<div class="compact-info">Maria José Santos</div>', unsafe_allow_html=True)
+    st.markdown('<div class="compact-info"><strong>👤 Paciente:</strong> Maria José Santos</div>', unsafe_allow_html=True)
     
     with st.form("soap_form"):
         st.markdown('<p class="soap-label">S - Subjetivo</p>', unsafe_allow_html=True)
         subjetivo = st.text_area(
+            "",
             placeholder="Sintomas, queixas do paciente, história clínica...",
             height=68,
             key="s"
@@ -134,6 +151,7 @@ elif st.session_state.screen == 2:
         
         st.markdown('<p class="soap-label">O - Objetivo</p>', unsafe_allow_html=True)
         objetivo = st.text_area(
+            "",
             placeholder="Sinais vitais, exame físico, observações...",
             height=68,
             key="o"
@@ -141,6 +159,7 @@ elif st.session_state.screen == 2:
         
         st.markdown('<p class="soap-label">A - Avaliação</p>', unsafe_allow_html=True)
         avaliacao = st.text_area(
+            "",
             placeholder="Diagnóstico, impressão clínica, análise...",
             height=68,
             key="a"
@@ -148,6 +167,7 @@ elif st.session_state.screen == 2:
         
         st.markdown('<p class="soap-label">P - Plano</p>', unsafe_allow_html=True)
         plano = st.text_area(
+            "",
             placeholder="Tratamento, medicação, seguimento, próximos passos...",
             height=68,
             key="p"
