@@ -39,8 +39,9 @@ st.markdown("""
         font-size: 18px;
         font-weight: bold;
         color: #4facfe;
-        margin-bottom: 2px;
-        margin-top: 5px;
+        margin-bottom: 0px !important;
+        margin-top: 3px !important;
+        line-height: 1.1 !important;
     }
     
     .compact-info {
@@ -63,16 +64,24 @@ st.markdown("""
     /* Reduzir espaçamento entre campos do formulário */
     .stTextArea > div > div > div > div {
         margin-bottom: 0px !important;
+        margin-top: 0px !important;
     }
     
     .stTextArea {
-        margin-bottom: 8px !important;
+        margin-bottom: 5px !important;
+        margin-top: 0px !important;
     }
     
     /* Reduzir padding interno das caixas de texto */
     .stTextArea textarea {
         padding: 8px !important;
         line-height: 1.2 !important;
+    }
+    
+    /* Reduzir espaço entre label e input */
+    .stTextArea > label {
+        margin-bottom: 0px !important;
+        padding-bottom: 0px !important;
     }
 </style>
 """, unsafe_allow_html=True)
