@@ -147,7 +147,7 @@ if st.session_state.screen == 1:
         st.markdown("""
         <div class="consulta-card">
             <h3>🩺 Dr. João Silva - Cardiologia</h3>
-            <p><strong>Paciente:</strong> Maria José Santos</p>
+            <p>Maria José Santos</p>
             <p><strong>Tipo:</strong> Consulta de rotina</p>
             <p><strong>Hora:</strong> ⏰ 09:30</p>
         </div>
